@@ -70,34 +70,34 @@ func pidPrefix() string {
 
 //Noticef ...
 func (l *Logger) Noticef(format string, v ...interface{}) {
-	l.logger.Printf(l.infoLabel+format, v)
+	l.logger.Printf(l.infoLabel+format, v...)
 }
 
 //Warnf ...
 func (l *Logger) Warnf(format string, v ...interface{}) {
-	l.logger.Printf(l.warnLabel+format, v)
+	l.logger.Printf(l.warnLabel+format, v...)
 }
 
 //Errorf ...
 func (l *Logger) Errorf(format string, v ...interface{}) {
-	l.logger.Printf(l.errorLabel+format, v)
+	l.logger.Printf(l.errorLabel+format, v...)
 }
 
 //Fatalf ...
 func (l *Logger) Fatalf(format string, v ...interface{}) {
-	l.logger.Printf(l.fatalLabel+format, v)
+	l.logger.Printf(l.fatalLabel+format, v...)
 }
 
 //Debugf ...
 func (l *Logger) Debugf(format string, v ...interface{}) {
 	if l.isDebugEnabled {
-		l.logger.Printf(l.debugLabel+format, v)
+		l.logger.Printf(l.debugLabel+format, v...)
 	}
 }
 
 //Tracef ...
 func (l *Logger) Tracef(format string, v ...interface{}) {
 	if l.isTraceEnabled {
-		l.logger.Printf(l.traceLabel+format, v)
+		l.logger.Printf(l.traceLabel+format, v...)
 	}
 }
